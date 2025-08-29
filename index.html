@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo de Sonidos del Mundo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1> &#127758; Mapa Interactivo de Sonidos del Mundo</h1>
+        <p>Haz clic en un punto para escuchar un sonido y conocer datos del país.</p>
+    </header>
+
+    <main>
+        <section class="contenedor">
+
+            <article class="mapa-container">
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="Mapa del Mundo">
+                </figure>
+                
+
+                <button class="punto" style="top: 52%; left: 25.5%;" 
+                     data-sonido="colombia.mp3" 
+                     data-nombre="Colombia" 
+                     data-imagen="acordeon.png"
+                     data-sitios="Cartagena, Bogotá, Medellín, Eje Cafetero, Parque Nacional Natural Tayrona"
+                     data-info="Colombia es un país vibrante y diverso ubicado en el extremo norte de Sudamérica. 
+                        Con costas en el Caribe y el Pacífico, es famoso por su riqueza natural, su café de renombre mundial,
+                        su música contagiosa como la cumbia y el vallenato, y su gente cálida y resiliente. Desde las 
+                        montañas de los Andes hasta la selva amazónica, Colombia es un mosaico de culturas, paisajes 
+                        y sabores que enamoran a quien lo visita."
+                     data-bandera="colombia.png">
+                     <span class="sr-only">Colombia</span>
+                </button>
+
+                <button class="punto" style="top: 60%; left: 32%;" 
+                     data-sonido="brasil.mp3" 
+                     data-nombre="Brasil" 
+                     data-imagen="brasil.png"
+                     data-sitios="Cristo Redentor, Pelourinho, Cataratas del Iguazú, Playas del Copacabana e Ipanema, Amazonas"
+                     data-info="Brasil es el país más grande de América del Sur y el quinto del mundo en extensión 
+                        territorial. Con una mezcla vibrante de culturas indígenas, africanas y europeas, destaca por 
+                        su biodiversidad, sus carnavales coloridos, y su pasión por el fútbol. Desde la selva amazónica 
+                        hasta las playas de Río de Janeiro, Brasil es sinónimo de alegría, ritmo y naturaleza exuberante".
+                     data-bandera="brasil.png">
+                     <span class="sr-only">Brasil</span>
+                </button>
+
+                <button class="punto" style="top: 31%; left: 46%;" 
+                     data-sonido="francia.mp3" 
+                     data-nombre="Francia" 
+                     data-imagen="torre.png"
+                     data-sitios="Torre Eiffel, Museo de Louvre, Catedral de Notre Dame, Palacio de Versalles, Costa Azul"
+                     data-info="Francia es un país elegante y culturalmente influyente ubicado en Europa occidental. 
+                        Con París como su capital, es famoso por su arte, moda, gastronomía y filosofía. Su lema nacional, 
+                        Liberté, égalité, fraternité (Libertad, igualdad, fraternidad), refleja su espíritu republicano 
+                        y su legado revolucionario. Francia combina paisajes encantadores —desde los Alpes hasta la 
+                        Riviera francesa— con una historia rica que ha dejado huella en todo el mundo"
+                     data-bandera="francia.png">
+                     <span class="sr-only">Francia</span>
+                </button>
+
+                <button class="punto" style="top: 32%; left: 75%;" 
+                     data-sonido="japon.mp3" 
+                     data-nombre="Japón" 
+                     data-imagen="monteFuji.png"
+                     data-sitios="Templo Sensō-ji, Monte Fuji, Santuario Fushimi Inari Taisha, Castillo de Osaka,
+                                    Parque de los Cerezos"
+                     data-info="Japón es un país insular ubicado en Asia oriental, formado por más de 6.800 islas, 
+                        entre ellas las principales: Honshu, Hokkaido, Kyushu y Shikoku. Conocido como el país del 
+                        sol naciente, destaca por su mezcla única de tradición milenaria y tecnología de vanguardia. 
+                        Su capital, Tokio, es una de las ciudades más pobladas y dinámicas del mundo. Japón es famoso 
+                        por su cultura refinada, sus paisajes montañosos, su gastronomía exquisita y su enfoque 
+                        meticuloso en la estética y la innovación"
+                     data-bandera="japon.png">
+                     <span class="sr-only">Japón</span>
+                </button>
+            </article>
+
+            <aside id="panel-lateral">
+                
+                <figure>
+                    <img id="bandera-pais" src="" alt="Bandera del país" style="display:none;">
+                </figure>
+                <article>
+                    <h2 id="nombre-pais">Selecciona un país</h2>
+                    <img id="imagen-pais" src="" alt="Imagen del país" style="display:none; margin:10px 0; border-radius:6px; max-width:100%;">
+                    <p id="info-pais">Haz clic en un punto del mapa para ver información, escuchar su sonido y ver su bandera.</p>
+                    <h3 id="titulo-sitios" style="display:none;">Sitios turísticos</h3>
+                    <ul id="lista-sitios"></ul>                
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <small>
+            © 2025 Luis García - Proyecto Educativo
+        </small>
+    </footer>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
