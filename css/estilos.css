@@ -20,14 +20,18 @@ header {
 }
 
 .mapa-container {
-    position: relative;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 2 / 1; /* 👈 proporción aproximada del mapa mundial */
 }
 
 .mapa-container img {
-    width: 90%;
-    max-width: 900px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* se ajusta sin deformar */
+  border: 2px solid #ccc;
+  border-radius: 8px;
 }
 
 .punto {
@@ -146,3 +150,4 @@ footer {
     height: 10px;
   }
 }
+
